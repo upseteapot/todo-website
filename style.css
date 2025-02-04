@@ -1,0 +1,29 @@
+
+.todo-manager {
+    display: inline-block;
+    height: 100%;
+    width: 40%;
+}
+
+.todo-manager ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.calendar {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 40%;
+}
+
+.calendar .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+}
+
