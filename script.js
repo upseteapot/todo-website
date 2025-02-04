@@ -46,6 +46,19 @@ function updateTodoDisplay() {
 
 function updateCalendar() {
     const calendar = document.getElementById("calendar-days");
+    const monthDays = getDaysInMonth(); 
+    const startWeekday = getStartWeekday();
+
+    for (let i=0; i < startWeekday; i++) {
+        let item = document.createElement("li");
+        calendar.appendChild(item);
+    }
+    
+    for (let i=0; i < monthDays; i++) {
+        let item = document.createElement("li");
+        item.textContent = `${i+1}`
+        calendar.appendChild(item);
+    }
 }
 
 // Compatibilty
@@ -59,4 +72,5 @@ const newTodoButton = document.getElementById("new-todo-button");
 newTodoButton.addEventListener("click", newTodoButtonClick);
 
 updateTodoDisplay();
+updateCalendar();
 

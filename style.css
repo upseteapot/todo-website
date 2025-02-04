@@ -1,14 +1,30 @@
 
+body {
+    font-size: 0px;
+}
+
 .todo-manager {
     display: inline-block;
     height: 100%;
-    width: 40%;
+    width: 50%;
 }
 
 .todo-manager ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.todo-manager ul li {
+    font-size: 14px;
+}
+
+.todo-manager input {
+    font-size: 14px;
+}
+
+.todo-manager button {
+    font-size: 14px;
 }
 
 .checked {
@@ -19,11 +35,18 @@
     display: inline-block;
     vertical-align: top;
     height: 100%;
-    width: 40%;
+    width: 50%;
 }
 
 .calendar .weekdays li {
     display: inline-block;
-    width: 13.6%;
+    width: calc(100%/7);
+    font-size: 14px;
+}
+
+.calendar .days li {
+    display: inline-block;
+    width: calc(100%/7);
+    font-size: 14px;
 }
 

@@ -5,6 +5,18 @@ function getCurrentDate() {
     return dateStr;
 }
 
+function getDaysInMonth() {
+    const date = new Date();
+    const lastDay = new Date(date.getFullYear(), date.getMonth()+1, 0);
+    return lastDay.getDate();
+}
+
+function getStartWeekday() {
+    const date = new Date();
+    const startDay = new Date(date.getFullYear(), date.getMonth()+1, 1);
+    return startDay.getDay();
+}
+
 function getId() {
     const idLocalStorage = localStorage.getItem("id");
     const id = (idLocalStorage === null) ? 0 : parseInt(idLocalStorage);
