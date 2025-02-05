@@ -1,12 +1,23 @@
 
-body {
-    font-size: 0px;
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 20px;
+    width: 95%;
 }
 
 .todo-manager {
-    display: inline-block;
-    height: 100%;
-    width: 50%;
+    background-color: white;
+    padding: 20px;
 }
 
 .todo-manager ul {
@@ -32,21 +43,25 @@ body {
 }
 
 .calendar {
-    display: inline-block;
-    vertical-align: top;
-    height: 100%;
-    width: 50%;
+    background-color: white;
+    padding: 20px;
 }
 
-.calendar .weekdays li {
-    display: inline-block;
-    width: calc(100%/7);
+.calendar .days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
     font-size: 14px;
 }
 
-.calendar .days li {
-    display: inline-block;
-    width: calc(100%/7);
-    font-size: 14px;
+.calendar .day {
+    border: solid;
+    aspect-ratio: 1 / 1; 
+    border-width: 1px;
+}
+
+.calendar .current-day {
+    background-color: lightskyblue;
 }
 

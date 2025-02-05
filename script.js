@@ -48,14 +48,31 @@ function updateCalendar() {
     const calendar = document.getElementById("calendar-days");
     const monthDays = getDaysInMonth(); 
     const startWeekday = getStartWeekday();
+    const currentDay = parseInt(getCurrentDate().split("-")[0]);
+    
+    calendar.innerHTML = `
+        <span>Domingo</span>
+        <span>Segunda</span>
+        <span>Terça</span>
+        <span>Quarta</span>
+        <span>Quinta</span>
+        <span>Sexta</span>
+        <span>Sábado</span>
+    `;
 
     for (let i=0; i < startWeekday; i++) {
-        let item = document.createElement("li");
+        let item = document.createElement("span");
         calendar.appendChild(item);
     }
-    
+
     for (let i=0; i < monthDays; i++) {
-        let item = document.createElement("li");
+        let item = document.createElement("span");
+        
+        if ((i+1) === currentDay)
+            item.className = "day current-day";        
+        else 
+            item.className = "day";
+
         item.textContent = `${i+1}`
         calendar.appendChild(item);
     }

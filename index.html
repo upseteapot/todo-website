@@ -3,37 +3,29 @@
 <html>
     <head>
         <title>Tarefas</title>
+        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
-        
         <script src="https://kit.fontawesome.com/0a10fdecf8.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class="todo-manager">
-            <input id="title-input" placeholder="Título"></input>
-            <button id="new-todo-button">Criar nova tarefa</button>
-            <ul id="todo-display"></ul>
+        <div class="background">
+            <div class="main-container">
+                <div class="todo-manager">
+                    <input id="title-input" placeholder="Título"></input>
+                    <button id="new-todo-button">Criar nova tarefa</button>
+                    <ul id="todo-display"></ul>
+                </div>
+
+                <div class="calendar">
+                    <div class="month"></div>
+                    <div id="calendar-days" class="days"></div>
+                </div>
+            </div>
         </div>
         
-        <div class="calendar">
-            <div class="month">
-            </div>
-            
-            <ul class="weekdays">
-                <li>Domingo</li>
-                <li>Segunda</li>
-                <li>Terça</li>
-                <li>Quarta</li>
-                <li>Quinta</li>
-                <li>Sexta</li>
-                <li>Sábado</li>
-            </ul>
-            
-            <ul id="calendar-days" class="days"></ul>
-        </div>
+        <script src="local.js"></script>
+        <script src="script.js"></script>
     </body>
-
-    <script src="local.js"></script>
-    <script src="script.js"></script>
 </html
 
