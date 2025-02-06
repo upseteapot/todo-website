@@ -1,18 +1,16 @@
 
 .background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: black;
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 2*20px);
+    height: calc(100vh - 2*20px);
+    padding: 20px;
 }
 
 .main-container {
     display: grid;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 2fr 5fr;
+    height: 100%;
     column-gap: 20px;
-    width: 70%;
 }
 
 .todo-manager {
@@ -43,6 +41,8 @@
 }
 
 .calendar {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 20px;
 }
@@ -57,19 +57,27 @@
 .calendar .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    column-gap: 5px;
+    column-gap: 10px;
     row-gap: 5px;
     font-size: 14px;
+    height: 100%;
 }
 
 .calendar .day {
     border: solid;
-    aspect-ratio: 1 / 1; 
     border-width: 1px;
+    height: 70px;
 }
 
-.calendar .not-this-month {
-    aspect-ratio: 1 / 1; 
+.not-this-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.calendar .day-content {
+    overflow: scroll;
 }
 
 .calendar .current-day {

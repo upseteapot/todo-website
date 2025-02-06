@@ -16,6 +16,7 @@ newTodoButton.addEventListener("click", newTodoButtonClick);
 function trashIconClick(e) {
     removeTodo(e.currentTarget.todoId); 
     updateTodoDisplay();
+    updateCalendarDays();
 }
 
 function checkIconClick(e) {

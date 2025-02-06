@@ -48,6 +48,7 @@ export function getCheckedTodo() {
     const todoData = getTodoData();
     let checked = new Map();
     let todo;
+    let date;
     for (let i=0; i < todoData.length; i++) {
         todo = todoData.at(i);
         for (let j=0; j < todo.statusHistory.length; j++) {
