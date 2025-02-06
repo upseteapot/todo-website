@@ -1,5 +1,5 @@
 import { getTodoData, addTodo, removeTodo, toggleStatus, getStatus } from "./storage.js"
-import { updateCalendar } from "./calendar.js"
+import { updateCalendarDays } from "./calendar.js"
 
 
 // "todo-manager"
@@ -21,7 +21,7 @@ function trashIconClick(e) {
 function checkIconClick(e) {
     toggleStatus(e.currentTarget.todoId);
     updateTodoDisplay();
-    updateCalendar();
+    updateCalendarDays();
 }
 
 export function updateTodoDisplay() {

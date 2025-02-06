@@ -18,11 +18,11 @@ export function parseDateKey(dateKey) {
 
 export function parseMonthYearKey(dateKey) {
     const splitDate = dateKey.split("-");
-    return new Date(splitDate[1], splitDate[0]);
+    return new Date(splitDate[1], splitDate[0] - 1);
 }
 
 export function getDaysInMonth(date) {
-    const lastDay = new Date(date.getFullYear(), date.getMonth(), 0);
+    const lastDay = new Date(date.getFullYear(), date.getMonth()+1, 0);
     return lastDay.getDate();
 }
 

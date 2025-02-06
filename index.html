@@ -16,14 +16,17 @@
                     <button id="new-todo-button">Criar nova tarefa</button>
                     <ul id="todo-display"></ul>
                 </div>
-
                 <div class="calendar">
-                    <div id="calendar-month" class="month"></div>
-                    <div id="calendar-days" class="days"></div>
+                    <div class="month">
+                        <button id="prev-month"><span class="fa-solid fa-chevron-left"></span></button>
+                        <span id="calendar-year"></span>
+                        <span id="calendar-month"></span>
+                        <button id="next-month"><span class="fa-solid fa-chevron-right"></span></button>
+                    </div>
+                    <ul id="calendar-days" class="days"></li>
                 </div>
             </div>
         </div>
-
         <script src="src/main.js" type="module"></script>
     </body>
 </html

@@ -1,4 +1,4 @@
-import { getCurrentDateKey, getMonthYearKey } from "./date.js"
+import { getCurrentDateKey, getMonthYearKey, parseMonthYearKey } from "./date.js"
 
 
 // "id" in localStorage.
@@ -96,12 +96,12 @@ export function getSelectedDate() {
 export function selectPreviousMonth() {
     const selectedDate = getSelectedDate();
     const newSelectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1);
-    sessionStorage.setItem("selected-date", parseMonthYearKey(newSelectedDate));
+    sessionStorage.setItem("selected-date", getMonthYearKey(newSelectedDate));
 }
 
 export function selectNextMonth() {
     const selectedDate = getSelectedDate();
     const newSelectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1);
-    sessionStorage.setItem("selected-date", parseMonthYearKey(newSelectedDate));
+    sessionStorage.setItem("selected-date", getMonthYearKey(newSelectedDate));
 }
 

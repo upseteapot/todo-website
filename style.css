@@ -10,9 +10,9 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 3fr 5fr;
     column-gap: 20px;
-    width: 95%;
+    width: 70%;
 }
 
 .todo-manager {
@@ -47,9 +47,16 @@
     padding: 20px;
 }
 
+.calendar .month {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .calendar .days {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
     column-gap: 5px;
     row-gap: 5px;
     font-size: 14px;
@@ -59,6 +66,10 @@
     border: solid;
     aspect-ratio: 1 / 1; 
     border-width: 1px;
+}
+
+.calendar .not-this-month {
+    aspect-ratio: 1 / 1; 
 }
 
 .calendar .current-day {

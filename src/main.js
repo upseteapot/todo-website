@@ -1,3 +1,3 @@
-import { updateCalendar } from "./calendar.js"
-import { updateTodoDisplay  } from "./todoManager.js"
+import "./calendar.js"
+import "./todoManager.js"
 
