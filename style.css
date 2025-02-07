@@ -1,4 +1,8 @@
 
+body {
+    font-family: "Rubik", serif;
+}
+
 .background {
     background-color: black;
     width: calc(100vw - 2*20px);
@@ -8,33 +12,11 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 2fr 2fr 7fr;
+    grid-template-columns: 3fr 2fr 7fr;
     height: 100%;
     column-gap: 20px;
 }
 
-.todo-manager {
-    background-color: white;
-    padding: 20px;
-}
-
-.todo-manager ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.todo-manager ul li {
-    font-size: 14px;
-}
-
-.todo-manager input {
-    font-size: 14px;
-}
-
-.todo-manager button {
-    font-size: 14px;
-}
 
 .completion {
     display: flex;
@@ -47,10 +29,6 @@
 .completion-canvas-container {
     width: 100px;
     height: 100px;
-}
-
-.checked {
-    text-decoration: line-through;
 }
 
 .calendar {

@@ -1,0 +1,104 @@
+
+.todo-manager {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    border-radius: 10px;
+    background-color: rgb(35, 35, 35);
+    padding: 20px;
+}
+
+.todo-manager-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.todo-manager-header__input[type=text] {
+    width: calc(80% - 2*10px);
+    height: 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    transition: all 0.15s;
+    padding: 10px;
+}
+.todo-manager-header__input[type=text]:focus {
+    outline: none;
+    color: white;
+    box-shadow: 5px 5px 10px rgb(255, 255, 200, 0.2);
+}
+
+.todo-manager-header__button {
+    width: 30px;
+    height: 30px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(200, 200, 200);
+    transition: all 0.15s;
+}
+.todo-manager-header__button:hover {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    color: rgb(100, 255, 100);
+    border-color: rgb(100, 255, 100);
+    box-shadow: 5px 5px 10px rgb(255, 255, 200, 0.2);
+}
+.todo-manager-header__button:active {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+}
+
+.todo-manager .todo-display {
+    list-style-type: none;
+    width: 100%;
+}
+
+.todo-manager .todo-display__li {
+    height: 16px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    transition: all 0.15s;
+}
+
+.todo-display__li:hover {
+    height: 20px;
+}
+
+.todo-display__li .checkbox {
+    font-size: 20px;
+    color: white;
+}
+
+.todo-display__li .checkbox.checked {
+    color: rgb(100, 255, 100);
+}
+
+.todo-display__li .title {
+    font-size: 16px;
+    color: white;
+}
+
+.todo-display__li .trash {
+    font-size: 16px;
+    color: rgb(255, 100, 100);
+}
+

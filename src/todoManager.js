@@ -25,22 +25,21 @@ export function updateTodoDisplay() {
 
     todoData.forEach((element) => {
         let item = document.createElement("li");
+        item.className = "todo-display__li";
         let checkIconClass = getStatus(element) ? "fa-square-check" : "fa-square"; 
-        let textClass = getStatus(element) ? "checked" : "unchecked";
+        let statusClass = getStatus(element) ? "checked" : "";
 
         item.innerHTML = `
-            <div>
-                <span id="${element.id}-check" class="fa-regular ${checkIconClass}"></span>
-                <span id="${element.id}-todo" class="${textClass}">${element.title}</span>
-                <span id="${element.id}-delete" class="fa fa-trash"></span>
-            </div>
+           <span id="${element.id}-check" class="checkbox ${statusClass} fa-regular ${checkIconClass}"></span>
+           <span id="${element.id}-todo" class="title">${element.title}</span>
+           <span id="${element.id}-delete" class="trash fa fa-trash"></span>
         `
         todoDisplay.appendChild(item);
 
         const checkIcon = document.getElementById(`${element.id}-check`);
         checkIcon.todoId = element.id;
         checkIcon.addEventListener("click", checkIconClick);
-        
+
         const trashIcon = document.getElementById(`${element.id}-delete`);
         trashIcon.todoId = element.id;
         trashIcon.addEventListener("click", trashIconClick);
@@ -49,15 +48,14 @@ export function updateTodoDisplay() {
 
 // "todo-manager"
 function newTodoButtonClick() {
-    const titleInput = document.getElementById("title-input");
+    const titleInput = document.getElementById("todo-title-input");
     addTodo(titleInput.value);
     updateTodoDisplay();
     updateTodoCompletion();
 }
 
-const newTodoButton = document.getElementById("new-todo-button");
+const newTodoButton = document.getElementById("todo-new-button");
 newTodoButton.addEventListener("click", newTodoButtonClick);
-
 
 updateTodoDisplay();
 
