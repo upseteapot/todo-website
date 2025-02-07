@@ -1,28 +1,21 @@
 import { getTodoData, addTodo, removeTodo, toggleStatus, getStatus } from "./storage.js"
 import { updateCalendarDays } from "./calendar.js"
+import { updateTodoCompletion } from "./completion.js"
 
-
-// "todo-manager"
-function newTodoButtonClick() {
-    const titleInput = document.getElementById("title-input");
-    addTodo(titleInput.value);
-    updateTodoDisplay();
-}
-
-const newTodoButton = document.getElementById("new-todo-button");
-newTodoButton.addEventListener("click", newTodoButtonClick);
 
 // "todo-display"
 function trashIconClick(e) {
     removeTodo(e.currentTarget.todoId); 
     updateTodoDisplay();
     updateCalendarDays();
+    updateTodoCompletion();
 }
 
 function checkIconClick(e) {
     toggleStatus(e.currentTarget.todoId);
     updateTodoDisplay();
     updateCalendarDays();
+    updateTodoCompletion();
 }
 
 export function updateTodoDisplay() {
@@ -53,6 +46,18 @@ export function updateTodoDisplay() {
         trashIcon.addEventListener("click", trashIconClick);
     });
 }
+
+// "todo-manager"
+function newTodoButtonClick() {
+    const titleInput = document.getElementById("title-input");
+    addTodo(titleInput.value);
+    updateTodoDisplay();
+    updateTodoCompletion();
+}
+
+const newTodoButton = document.getElementById("new-todo-button");
+newTodoButton.addEventListener("click", newTodoButtonClick);
+
 
 updateTodoDisplay();
 

@@ -5,9 +5,10 @@
         <title>Tarefas</title>
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
-        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>       
         <script src="https://kit.fontawesome.com/0a10fdecf8.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -17,6 +18,8 @@
                     <input id="title-input" placeholder="Título"></input>
                     <button id="new-todo-button">Criar nova tarefa</button>
                     <ul id="todo-display"></ul>
+                </div>
+                <div class="completion" id="completion-section">
                 </div>
                 <div class="calendar">
                     <div class="month">

@@ -1,5 +1,6 @@
 import { getDateKey, getMonthYearKey, getDaysInMonth, getStartWeekday } from "./date.js"
 import { getCheckedTodo, getSelectedDate, selectPreviousMonth, selectNextMonth } from "./storage.js"
+import { updateTodoCompletion } from "./completion.js" 
 
 
 const weekdaysNames = [ "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado" ];
@@ -41,6 +42,7 @@ function getTodoListItem(dateKey) {
         return null;
 
     let todoListItem = document.createElement("ul");
+    todoListItem.className = "day-content";
     let item;
 
     for (let i=0; i < todoList.length; i++) {
@@ -94,7 +96,6 @@ export function updateCalendarDays() {
         
         dayItem.className = "day"; 
         dayItem.className += (isSameDay && isSameMonth) ? " current-day" : "";
-        dayItem.className += (todoListItem != null) ? " day-content" : "";
     }
 
     for (let i=0; i < calendarDays.daysInMonth - startWeekday - monthDays; i++) {
@@ -112,12 +113,14 @@ function prevMonthButtonClick() {
     selectPreviousMonth();
     updateCalendarMonth();
     updateCalendarDays();
+    updateTodoCompletion();
 }
 
 function nextMonthButtonClick() {
     selectNextMonth();
     updateCalendarMonth();
     updateCalendarDays();
+    updateTodoCompletion();
 }
 
 const prevMonthButton = document.getElementById("prev-month");

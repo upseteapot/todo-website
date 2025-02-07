@@ -1,4 +1,4 @@
-import { getCurrentDateKey, getMonthYearKey, parseMonthYearKey } from "./date.js"
+import { getCurrentDateKey, getMonthYearKey, parseDateKey, parseMonthYearKey } from "./date.js"
 
 
 // "id" in localStorage.
@@ -59,6 +59,28 @@ export function getCheckedTodo() {
         }
     }
     return checked;
+}
+
+export function countTodosInMonth(date) {
+    const todoData = getTodoData();
+    let count = new Array();
+    let todo;
+    let completionDate;
+    let todoCount;
+    
+    for (let i=0; i < todoData.length; i++) {
+        todo = todoData.at(i);
+        todoCount = 0;
+        for (let j=0; j < todo.statusHistory.length; j++) {
+            completionDate = parseDateKey(todo.statusHistory[j]);
+            if (completionDate.getMonth() == date.getMonth()
+                && completionDate.getFullYear() == date.getFullYear())
+                todoCount += 1;
+        }
+        count.push({ title: todo.title, count: todoCount });
+    }
+    
+    return count;
 }
 
 export function toggleStatus(id) {
