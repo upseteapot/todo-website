@@ -17,20 +17,6 @@ body {
     column-gap: 20px;
 }
 
-
-.completion {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    overflow: scroll;
-}
-
-.completion-canvas-container {
-    width: 100px;
-    height: 100px;
-}
-
 .calendar {
     display: flex;
     flex-direction: column;

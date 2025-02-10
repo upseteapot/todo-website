@@ -24,7 +24,7 @@ export function updateTodoDisplay() {
     todoDisplay.innerHTML = "";
 
     todoData.forEach((element) => {
-        let item = document.createElement("li");
+        let item = document.createElement("div");
         item.className = "todo-display__li";
         let checkIconClass = getStatus(element) ? "fa-square-check" : "fa-square"; 
         let statusClass = getStatus(element) ? "checked" : "";

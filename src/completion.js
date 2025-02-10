@@ -16,9 +16,10 @@ export function updateTodoCompletion() {
     let id;
     let chart;
     let container;
-    
+
     for (let i=0; i < count.length; i++) {
         div = document.createElement("div"); 
+        div.className = "todo-completion";
         container = document.createElement("div");
         container.className = "completion-canvas-container";
         
@@ -30,7 +31,7 @@ export function updateTodoCompletion() {
         canvas.id = id; 
         canvas.className = "completion-canvas";
         dataValue = [count[i].count, total - count[i].count];
-        color = ["red", "grey"];
+        color = ["rgb(100, 255, 100)", "grey"];
 
         container.appendChild(canvas);
         div.appendChild(span);
@@ -44,15 +45,15 @@ export function updateTodoCompletion() {
                 labels: ["Feita", "Não feita"],
                 datasets: [{ 
                     backgroundColor: color, 
-                    data: dataValue 
+                    borderWidth: 0,
+                    data: dataValue,
                 }] 
             },
             options: {
-                resposive: true,
+                cutoutPercentage: 85,
                 legend: {
                     display: false
                 },
-                borderWidth: 0
             }
         })
 
