@@ -8,9 +8,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="main.css" />
         <link rel="stylesheet" href="todo-manager.css" />
         <link rel="stylesheet" href="completion.css" />
+        <link rel="stylesheet" href="calendar.css" />
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>       
         <script src="https://kit.fontawesome.com/0a10fdecf8.js" crossorigin="anonymous"></script>
@@ -37,10 +38,10 @@
                 <!-- Right section: calendar -->
                 <div class="calendar">
                     <div class="month">
-                        <button id="prev-month"><span class="fa-solid fa-chevron-left"></span></button>
+                        <button id="prev-month" class="month-button"><span class="fa-solid fa-chevron-left"></span></button>
                         <span id="calendar-year"></span>
                         <span id="calendar-month"></span>
-                        <button id="next-month"><span class="fa-solid fa-chevron-right"></span></button>
+                        <button id="next-month" class="month-button"><span class="fa-solid fa-chevron-right"></span></button>
                     </div>
                     <ul id="calendar-days" class="days"></li>
                 </div>

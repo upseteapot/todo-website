@@ -2,7 +2,7 @@
 .todo-manager {
     display: grid;
     grid-template-rows: 60px 1fr;
-    row-gap: 10px;
+    row-gap: 20px;
     border-radius: 10px;
     background-color: rgb(35, 35, 35);
     padding: 20px;
@@ -36,7 +36,7 @@
 .todo-manager-header__input[type=text]:focus {
     outline: none;
     color: white;
-    box-shadow: 5px 5px 10px rgb(255, 255, 200, 0.2);
+    box-shadow: 0px 5px 10px rgb(255, 255, 200, 0.2);
 }
 
 .todo-manager-header__button {
@@ -56,7 +56,7 @@
     border-radius: 17px;
     color: rgb(100, 255, 100);
     border-color: rgb(100, 255, 100);
-    box-shadow: 5px 5px 10px rgb(255, 255, 200, 0.2);
+    box-shadow: 0px 5px 10px rgb(255, 255, 200, 0.2);
 }
 .todo-manager-header__button:active {
     width: 28px;
@@ -71,7 +71,8 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    gap: 10px;
+    gap: 15px;
+    padding: 10px;
 }
 
 .todo-manager .todo-display__li {
@@ -81,12 +82,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 20px;
     justify-content: space-between;
     transition: all 0.15s;
 }
 
 .todo-display__li:hover {
-    height: 20px;
+    box-shadow: 0px 5px 10px rgb(255, 255, 200, 0.2);
 }
 
 .todo-display__li .checkbox {

@@ -1,0 +1,36 @@
+
+body {
+    font-family: "Rubik", serif;
+}
+
+
+@media (max-width: 1000px) {
+    .background {
+        background-color: black;
+        padding: 20px;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-rows: 3fr 2fr 8fr;
+        width: 100%;
+        row-gap: 20px;
+    }
+}
+
+@media (min-width: 1001px) {
+    .background {
+        background-color: black;
+        width: calc(100vw - 2*20px);
+        height: calc(100vh - 2*20px);
+        padding: 20px;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr 8fr;
+        height: 100%;
+        column-gap: 20px;
+    }
+}
+

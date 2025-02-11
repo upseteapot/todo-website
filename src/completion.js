@@ -16,6 +16,14 @@ export function updateTodoCompletion() {
     let id;
     let chart;
     let container;
+    
+    if (count.length == 0) {
+        completionSection.innerHTML = `
+            <div class="message">
+            Crie novas tarefas para ver seu progresso!
+            </div>
+        `
+    }
 
     for (let i=0; i < count.length; i++) {
         div = document.createElement("div"); 

@@ -9,6 +9,11 @@
     overflow: auto;
 }
 
+.completion .message {
+    color: white;
+    text-align: center;
+}
+
 .todo-completion {
     display: flex;
     flex-direction: column;
